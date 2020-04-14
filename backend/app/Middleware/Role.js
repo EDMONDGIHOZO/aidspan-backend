@@ -4,7 +4,7 @@
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 const Role = use("App/Models/Role");
 
-class Role {
+class UserRole {
   /**
    * @param {object} ctx
    * @param {Request} ctx.request
@@ -13,18 +13,17 @@ class Role {
   async handle({ request, auth, response }, next) {
     // call next to advance the request
     const user = await auth.getUser();
-    const role = await auth.getUser();
     const role = await user
       .roles()
       .withPivot("role_id")
       .select("description")
       .fetch();
-    const isEditorUser = role
+    const isAdminUser = role
       .toJSON()
-      .find((rol) => role.decription === "admin");
-    if (!isEditorUser) return response.status(401).send("Forbidden ");
+      .find((rol) => rol.description === "admin");
+    if (!isAdminUser) return response.status(401).send("Forbidden ");
     await next();
   }
 }
 
-module.exports = Role;
+module.exports = UserRole;
