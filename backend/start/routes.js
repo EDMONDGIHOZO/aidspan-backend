@@ -22,8 +22,8 @@ Route.get("/", () => {
 Route.post("/register", "User/RegisterController.register");
 Route.post("/login", "User/LoginController.login");
 Route.group(() => {
-  Route.post("/post", "Article/PostController.store").middleware(["auth"]);
-  Route.put("/edit/:id", "Article/EditController.update").middleware(["owner"]);
+  Route.post("/create", "Article/PostController.store").middleware(["auth"]);
+  Route.put("/edit/:id", "Article/EditController.update");
   Route.delete("delete/:id", "Article/DeleteController.destroy").middleware([
     "role",
   ]);

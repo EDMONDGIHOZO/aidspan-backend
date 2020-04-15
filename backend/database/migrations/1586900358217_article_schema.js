@@ -12,6 +12,7 @@ class ArticleSchema extends Schema {
       table.string("abstract");
       table.string("author");
       table.datetime("date");
+      table.string("content");
       table.boolean("published").defaultTo("false");
       table.string("type");
       table.string("tags");
