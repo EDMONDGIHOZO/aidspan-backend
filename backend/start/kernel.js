@@ -39,6 +39,7 @@ const namedMiddleware = {
   guest: "Adonis/Middleware/AllowGuestOnly",
   role: "App/Middleware/Role",
   owner: "App/Middleware/Owner ",
+  category: "App/Middleware/Category ",
 };
 
 /*
