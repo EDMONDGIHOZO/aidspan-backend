@@ -23,9 +23,7 @@ Route.post("/register", "User/RegisterController.register");
 Route.post("/login", "User/LoginController.login");
 Route.group(() => {
   Route.post("/post", "Article/PostController.store").middleware(["auth"]);
-  Route.update("/edit/:id", "Article/EditController.update").middleware([
-    "owner",
-  ]);
+  Route.put("/edit/:id", "Article/EditController.update").middleware(["owner"]);
   Route.delete("delete/:id", "Article/DeleteController.destroy").middleware([
     "role",
   ]);
