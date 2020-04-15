@@ -16,6 +16,8 @@ const providers = [
   "@adonisjs/bodyparser/providers/BodyParserProvider",
   "@adonisjs/cors/providers/CorsProvider",
   "@adonisjs/lucid/providers/LucidProvider",
+  "adonis-swagger/providers/SwaggerProvider",
+  "adonis-swagger-jsdoc/providers/SwaggerjsdocProvider",
 ];
 
 /*

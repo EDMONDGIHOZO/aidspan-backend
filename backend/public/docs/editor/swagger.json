@@ -1,0 +1,31 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "COVID19-Social-Welfare-Linker Api",
+    "description": "API documentation for all COVID19-Social-Welfare-Linker endpoints.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://socialwelfare.herokuapp.com/",
+      "description": "Development server host."
+    },
+    {
+      "url": "http://localhost:3333",
+      "description": "Development machine host."
+    }
+  ],
+  "securityDefinitions": {
+    "google_oauth": {
+      "type": "oauth2",
+      "description": "Google OAuth",
+      "flow": "accessCode",
+      "authorizationUrl": "https://accounts.google.com/signin/oauth/oauthchooseaccount",
+      "tokenUrl": "https://www.googleapis.com/oauth2/v4/token",
+      "x-tokenName": "id_token",
+      "scopes": {
+        "client_id": null
+      }
+    }
+  }
+}
