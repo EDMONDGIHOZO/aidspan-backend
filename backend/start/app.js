@@ -18,6 +18,7 @@ const providers = [
   "@adonisjs/lucid/providers/LucidProvider",
   "adonis-swagger/providers/SwaggerProvider",
   "adonis-swagger-jsdoc/providers/SwaggerjsdocProvider",
+  "@adonisjs/validator/providers/ValidatorProvider",
 ];
 
 /*

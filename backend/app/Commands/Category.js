@@ -21,7 +21,7 @@ class Category extends Command {
       { name: "issue5" },
     ];
     const choice = await this.choice(
-      "You are about to add 10 Categories, Do you want to proceed?",
+      "You are about to add 5 Categories, Do you want to proceed?",
       ["Yes", "No"]
     );
 
